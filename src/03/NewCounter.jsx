@@ -5,10 +5,11 @@ class NewCounter extends Component {
     constructor(props){
         super(props);
         this.state = {};
-        this.increseCount = this.increseCount.bind(this);
+        this.increaseCount = this.increaseCount.bind(this);
     }
 
     static getDerivedStateFromProps(props, state){
+        console.log('getDerivedStateFromProps in NewCounter')
         const { count }  = props;
         return {
             count,
@@ -30,7 +31,7 @@ class NewCounter extends Component {
         return (
             <div>
                 현재 카운트 : {this.state.newCount}
-                <button onClick={this.increseCount}>카운트 증가</button>
+                <button onClick={this.increaseCount}>카운트 증가</button>
             </div>
         );
     }

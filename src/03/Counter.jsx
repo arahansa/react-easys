@@ -18,8 +18,8 @@ class Counter extends Component {
     render() {
         return (
             <div>
-                현재 카운트 : ${this.state.count}
-                <button onClick={this.increaseCount}></button>
+                현재 카운트 : {this.state.count}
+                <button onClick={this.increaseCount}>카운트 증가</button>
             </div>
         );
     }

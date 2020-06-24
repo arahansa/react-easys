@@ -2,12 +2,19 @@ import React, {Component} from 'react';
 
 import ForceUpdateExample from "./03/ForceUpdateExample";
 import LifecycleExample from "./03/LifecycleExample";
+import Counter from "./03/Counter";
+import NewCounter from "./03/NewCounter";
 
 
 class App extends Component {
     constructor(props){
         super(props);
-        this.state = {hasDestroyed: false };
+        this.state = {count : 10};
+        this.resetCount = this.resetCount.bind(this);
+    }
+
+    resetCount() {
+        this.setState( ({count}) => ({count: count + 10}));
     }
 
     componentDidMount() {
@@ -17,7 +24,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                {this.state.hasDestroyed ?  null : <LifecycleExample/>}
+                <div><Counter count={this.state.count}></Counter></div>
+                <div><NewCounter count={this.state.count}/></div>
+                <button onClick={this.resetCount}>{this.state.count + 10} 으로 초기화</button>
             </div>
         );
     }
