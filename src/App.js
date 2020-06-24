@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import TodaysPlan from "./03/TodaysPlan";
+import PropsComponent from "./03/PropsComponent";
 
 class App extends Component {
     render() {
         return (
             <div>
-                <img src="http://www.easyspub.co.kr/images/logo_footer.png"/>
-                <div>안녕하세요</div>
+                <PropsComponent name="두잇 리액트"/>
             </div>
         );
     }
