@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 
-import ChildProperty from "./03/ChildProperty";
+import StateExample from "./03/StateExample";
 
 
 class App extends Component {
     render() {
         return (
             <div>
-                <ChildProperty>
-                    <div><span>자식노드</span></div>
-                </ChildProperty>
+                <StateExample/>
             </div>
         );
     }
