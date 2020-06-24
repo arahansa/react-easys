@@ -5,11 +5,19 @@ import LifecycleExample from "./03/LifecycleExample";
 
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {hasDestroyed: false };
+    }
+
+    componentDidMount() {
+        this.setState({hasDestroyed : true});
+    }
+
     render() {
         return (
             <div>
-                {/*<ForceUpdateExample/>*/}
-                <LifecycleExample/>
+                {this.state.hasDestroyed ?  null : <LifecycleExample/>}
             </div>
         );
     }
