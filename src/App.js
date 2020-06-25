@@ -1,21 +1,24 @@
 import React, {Component} from 'react';
+import Counter2 from "./03/Counter2";
 
-import ForceUpdateExample from "./03/ForceUpdateExample";
-import LifecycleExample from "./03/LifecycleExample";
-import Counter from "./03/Counter";
-import NewCounter from "./03/NewCounter";
-import ListExample from "./03/ListExample";
 
 
 class App extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            count : 1,
+        }
+        this.increaseCount = this.increaseCount.bind(this);
+    }
+    increaseCount() {
+        this.setState( ({count}) => ({count:count+1}) );
     }
 
     render() {
         return (
             <div>
-                <ListExample/>
+                <Counter2 count={this.state.count} onAdd={this.increaseCount}></Counter2>
             </div>
         );
     }
