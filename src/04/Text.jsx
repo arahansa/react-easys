@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import withStyles, {css} from './withStyles'
 
-class Text extends Component {
+class Text extends PureComponent {
 
     render() {
-        const {children} = this.props;
+        const {children, styles} = this.props;
 
         return (
-            <span>
+            <span {...css(styles.default)}>
                 {children}
             </span>
         );
