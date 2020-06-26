@@ -18,7 +18,10 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Counter2 count={this.state.count} onAdd={this.increaseCount}></Counter2>
+                <nav className="nav-wrapper">
+                    <div>두잇! 리액트 시작하기</div>
+
+                </nav>
             </div>
         );
     }
