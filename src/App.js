@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import Counter2 from "./03/Counter2";
-
+import './materialize.css'
 
 
 class App extends Component {
@@ -20,8 +19,8 @@ class App extends Component {
             <div>
                 <nav className="nav-wrapper">
                     <div>두잇! 리액트 시작하기</div>
-
                 </nav>
+                <h1>머티리얼 CSS</h1>
             </div>
         );
     }
